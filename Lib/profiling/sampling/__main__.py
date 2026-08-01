@@ -65,6 +65,7 @@ if __name__ == '__main__':
         main()
     except PermissionError:
         handle_permission_error()
+        sys.exit(1)
     except SamplingUnknownProcessError as err:
         print(f"Tachyon cannot find the process: {err}", file=sys.stderr)
         sys.exit(1)
